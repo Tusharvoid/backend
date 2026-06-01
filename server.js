@@ -56,6 +56,7 @@ if (require.main === module) {
 
   app.listen(port, () => {
     console.log(`Employee Leave Management System running at http://localhost:${port}`);
+    db.testConnection();
   });
 }
 

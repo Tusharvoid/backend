@@ -12,4 +12,16 @@ const pool = mysql.createPool({
   connectionLimit: 10
 });
 
+// This function checks whether Node.js can connect to MySQL.
+// It runs once when the server starts and prints a helpful message.
+async function testConnection() {
+  try {
+    await pool.query('SELECT 1');
+    console.log('MySQL connected successfully');
+  } catch (error) {
+    console.error('MySQL connection failed:', error.message);
+  }
+}
+
 module.exports = pool;
+module.exports.testConnection = testConnection;
