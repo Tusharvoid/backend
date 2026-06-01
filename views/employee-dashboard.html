@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js" defer></script>
+</head>
+<body data-page="employee-dashboard">
+  <nav class="navbar">
+    <a class="brand" href="/employee-dashboard.html">Leave System</a>
+    <div class="nav-links">
+      <a href="/employee-dashboard.html">Dashboard</a>
+      <a href="/apply-leave.html">Apply Leave</a>
+      <a href="/leave-history.html">Leave History</a>
+      <button id="logoutBtn" class="link-button">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Employee Dashboard</h1>
+      <p class="muted">Welcome, <span id="employeeName">Employee</span>.</p>
+    </section>
+
+    <section class="grid two-columns">
+      <div class="card">
+        <h2>Available Leave Balance</h2>
+        <p class="big-number"><span id="leaveBalance">0</span> days</p>
+      </div>
+
+      <div class="card">
+        <h2>Quick Actions</h2>
+        <div class="action-row">
+          <a class="button" href="/apply-leave.html">Apply for Leave</a>
+          <a class="button secondary" href="/leave-history.html">View History</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Recent Leave Requests</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Start</th>
+              <th>End</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="recentRequestsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

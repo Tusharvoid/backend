@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Leave</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js" defer></script>
+</head>
+<body data-page="apply-leave">
+  <nav class="navbar">
+    <a class="brand" href="/employee-dashboard.html">Leave System</a>
+    <div class="nav-links">
+      <a href="/employee-dashboard.html">Dashboard</a>
+      <a href="/apply-leave.html">Apply Leave</a>
+      <a href="/leave-history.html">Leave History</a>
+      <button id="logoutBtn" class="link-button">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container narrow">
+    <section class="page-header">
+      <h1>Apply for Leave</h1>
+      <p class="muted">Fill the form and submit it for admin approval.</p>
+    </section>
+
+    <section class="card">
+      <form id="applyLeaveForm" class="form">
+        <label for="leaveType">Leave Type</label>
+        <select id="leaveType" name="leaveType" required>
+          <option value="">Select leave type</option>
+          <option value="Sick Leave">Sick Leave</option>
+          <option value="Casual Leave">Casual Leave</option>
+          <option value="Annual Leave">Annual Leave</option>
+        </select>
+
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" name="startDate" required>
+
+        <label for="endDate">End Date</label>
+        <input type="date" id="endDate" name="endDate" required>
+
+        <label for="reason">Reason</label>
+        <textarea id="reason" name="reason" rows="4" placeholder="Enter reason for leave" required></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
+
+      <p id="message" class="message"></p>
+    </section>
+  </main>
+</body>
+</html>
